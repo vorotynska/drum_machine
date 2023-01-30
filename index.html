@@ -7,60 +7,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drum Machine</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" href="./style.css" />
   <script defer src="./index.js"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  
+
 </head>
 
 <body>
-  <div id="drum-machine">
+  <div id="drum-machine" class="container">
+    <h1 class="text-center">Drum Machine</h1>
     <div>
       <header class="header">
-        <input type="text" disabled id="display" class="" />
+        <input type="text"  id="display" class="" value="0"/>
       </header>
       <footer class="footer" id="footer">
         <div class="btn-group">
-          <button data-key="81" class="drum-pad" id="btn-q" value="Heater 1">Q
-            <audio id="Q"  src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" class="clip">
+          <button data-key="81" class="drum-pad" id="KeyQ" value="Heater 1">Q
+            <audio id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" class="clip">
+              Heater 1
             </audio>
           </button>
-          <button data-key="87" class="drum-pad" id="btn-w" value="Heater 2">W
-            <audio id="W" data-key="" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg" class="clip">
+          <button data-key="87" class="drum-pad" id="KeyW" value="Heater 2">W
+            <audio id="W" data-key="" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg"
+              class="clip">
             </audio>
           </button>
-          <button data-key="69" class="drum-pad" id="btn-e" value="Heater 3">E
+          <button data-key="69" class="drum-pad" id="KeyE" value="Heater 3">E
             <audio id="E" data-key="" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" class="clip">
             </audio>
           </button>
           <div class="btn-group">
-            <button data-key="65" class="drum-pad" id="btn-a" value="Heater 4">A
+            <button data-key="65" class="drum-pad" id="KeyA" value="Heater 4">A
               <audio id="A" data-key="65" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" class="clip">
               </audio>
             </button>
-            <button data-key="83" class="drum-pad" id="btn-s" value="Clap">S
+            <button data-key="83" class="drum-pad" id="KeyS" value="Clap">S
               <audio id="S" data-key="83" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" class="clip">
               </audio>
             </button>
-            <button data-key="68" class="drum-pad" id="btn-d" value="Open-HH">D
+            <button data-key="68" class="drum-pad" id="KeyD" value="Open-HH">D
               <audio id="D" data-key="8" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" class="clip">
               </audio>
             </button>
             <div class="btn-group">
-              <button data-key="90" class="drum-pad" id="btn-z" value="Kick-n'-Hat">Z
+              <button data-key="90" class="drum-pad" id="KeyZ" value="Kick-n'-Hat">Z
                 <audio id="Z" data-key="90" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
                   class="clip">
                 </audio>
               </button>
-              <button data-key="88" class="drum-pad" id="btn-x" value="Kick">X
+              <button data-key="88" class="drum-pad" id="KeyX" value="Kick">X
                 <audio id="X" data-key="88" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
                   class="clip">
                 </audio>
               </button>
-              <button data-key="67" class="drum-pad" id="btn-c" value="Closed-HH">C
+              <button data-key="67" class="drum-pad" id="KeyC" value="Closed-HH">C
                 <audio id="C" data-key="67" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" class="clip">
                 </audio>
               </button>
@@ -73,18 +76,10 @@
     </div>
   </div>
 
-  <div id="drumSet">
-    <button id="KeyW">Tom 1</button>
-    <button id="KeyA">Tom 2</button>
-    <button id="KeyS">Tom 3</button>
-    <button id="KeyD">Tom 4</button>
-    <button id="KeyJ">Snare</button>
-    <button id="KeyK">Crash</button>
-    <button id="KeyL">Kick-bass</button>
-  </div>
-  
-  
-  
+ 
+
+
+
 
 
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

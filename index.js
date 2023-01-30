@@ -1,74 +1,142 @@
-const display = document.getElementById('display');
-let btn_q = document.getElementById('btn-q');
-let btn_w = document.getElementById('btn-w');
-let btn_e = document.getElementById('btn-e');
+let KeyQ = document.getElementById('KeyQ');
+let KeyW = document.getElementById('KeyW');
+let KeyE = document.getElementById('KeyE');
 let audioQ = document.getElementById('Q');
 let audioW = document.getElementById('W');
 let audioE = document.getElementById('E');
-let btn_a = document.getElementById('btn-a');
-let btn_s = document.getElementById('btn-s');
-let btn_d = document.getElementById('btn-d');
+let KeyA = document.getElementById('KeyA');
+let KeyS = document.getElementById('KeyS');
+let KeyD = document.getElementById('KeyD');
 let audioA = document.getElementById('A');
 let audioS = document.getElementById('S');
 let audioD = document.getElementById('D');
-let btn_z = document.getElementById('btn-z');
-let btn_x = document.getElementById('btn-x');
-let btn_c = document.getElementById('btn-c');
+let KeyZ = document.getElementById('KeyZ');
+let KeyX = document.getElementById('KeyX');
+let KeyC = document.getElementById('KeyC');
 let audioZ = document.getElementById('Z');
 let audioX = document.getElementById('X');
 let audioC = document.getElementById('C');
+let output = document.querySelector('#display');
 
-btn_q.addEventListener('click', (e) => {
-    display.value = e.target.value;
+KeyQ.addEventListener('click', (e) => {
+    console.log(KeyQ.innerText);
+    output.innerText = 'Heater 1'
     audioQ.play();
+    console.log(output);
 });
-btn_w.addEventListener('click', (e) => {
-    display.value = e.target.value;
+KeyW.addEventListener('click', (e) => {
+    output.innerText = 'Heater 2';
     audioW.play();
 });
 
-btn_e.addEventListener('click', (e) => {
+KeyE.addEventListener('click', (e) => {
     audioE.play();
-    display.value = e.target.value;
+    output.innerText = 'Heater 3'
 });
 
-btn_a.addEventListener('click', (e) => {
-    display.value = e.target.value;
+KeyA.addEventListener('click', (e) => {
+    output.innerText = 'Heater 4';
     audioA.play();
 });
-btn_s.addEventListener('click', (e) => {
-    display.value = e.target.value;
+KeyS.addEventListener('click', (e) => {
+    output.innerText = 'Clap';
     audioS.play();
 });
 
-btn_d.addEventListener('click', (e) => {
+KeyD.addEventListener('click', (e) => {
     audioD.play();
-    display.value = e.target.value;
+    output.innerText = 'Open-HH';
 });
 
-btn_z.addEventListener('click', (e) => {
-    display.value = e.target.value;
+KeyZ.addEventListener('click', (e) => {
+    output.innerText = "Kick-n'-Hat";
     audioZ.play();
 });
-btn_x.addEventListener('click', (e) => {
-    display.value = e.target.value;
+KeyX.addEventListener('click', (e) => {
+    output.innerText = 'Kick';
     audioX.play();
 });
 
-btn_c.addEventListener('click', (e) => {
+KeyC.addEventListener('click', (e) => {
     audioC.play();
-    display.value = e.target.value;
+    output.innerText = 'Closet-HH'
     console.log(e.target.value)
 });
 
-btn_q.addEventListener('keyup', (e) => {
-    display.value = e.target.value;
-    audioQ.play();
-    console.log(display.value);
+window.addEventListener('keyup', (e) => {
+    if (e.key == 'Q' || e.key == 'q') {
+        output.innerText = 'Heater 1'
+        audioQ.play();
+        console.log();
+    }
+    if (e.key == 'W' || e.key == 'w') {
+        output.innerText = 'Heater 2';
+        audioW.play();
+    }
+    if (e.key == 'E' || e.key == 'e') {
+        output.innerText = 'Heater 3';
+        audioE.play();
+    }
+    if (e.key == 'A' || e.key == 'a') {
+        output.innerText = 'Heater 4';
+        audioA.play();
+    }
+    if (e.key == 'S' || e.key == 's') {
+        output.innerText = 'Clap';
+        audioS.play();
+    }
+    if (e.key == 'D' || e.key == 'd') {
+        output.innerText = 'Open-HH';
+        audioD.play();
+    }
+    if (e.key == 'Z' || e.key == 'z') {
+        output.innerText = "Kick-n'-Hat"
+        audioZ.play();
+    }
+    if (e.key == 'X' || e.key == 'x') {
+        output.innerText = 'Kick';
+        audioX.play();
+    }
+    if (e.key == 'C' || e.key == 'c') {
+        output.innerText = 'Closed-HH';
+        audioC.play();
+    }
+
 
 })
 
+
+
 const sounds = {
+    'KeyQ': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
+    'KeyW': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3',
+    'KeyE': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3',
+    'KeyA': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3',
+    'KeyS': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3',
+    'KeyD': 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3',
+    'KeyZ': 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3',
+    'KeyX': 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3',
+    'KeyC': 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+};
+
+const play = sound => {
+    console.log("playing", sound)
+    var audio = new Audio(sound);
+    audio.play();
+}
+/*
+document.getElementById('footer').addEventListener('click', function (e) {
+    const tgt = e.target.closest('button');
+
+    if (tgt) play(sounds[tgt.id]);
+    display.value = e.target.value;
+
+});*/
+
+
+
+
+const a = {
     'KeyW': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom1.ogg',
     'KeyA': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom2.ogg',
     'KeyS': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom3.ogg',
@@ -78,22 +146,24 @@ const sounds = {
     'KeyL': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/kik.ogg'
 }
 
-const play = sound => {
-    console.log("playing", sound)
-    var audio = new Audio(sound);
-    audio.play();
-}
 
+//*const demo = document.getElementById('demo');
 
-document.getElementById('drumSet').addEventListener('click', function (e) {
-    const tgt = e.target.closest('button');
-    if (tgt) play(sounds[tgt.id])
-})
+//*document.getElementById('drumSet').addEventListener('click', function (e) {
+//*   const tgt = e.target.closest('button');
 
-window.addEventListener('keypress', function (e) {
+//*   if (tgt) play(sounds[tgt.id]);
+//*  demo.value = e.target.value;
+
+//*}) 
+
+/*window.addEventListener('keypress', function (e) {
     console.log(e.code)
+    demo.value = e.target.value
     if (sounds[e.code]) {
         console.log("clicking", e.code)
         document.getElementById(e.code).click()
+
+
     }
-})
+})*/
