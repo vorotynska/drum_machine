@@ -19,13 +19,13 @@ let audioC = document.getElementById('C');
 let output = document.querySelector('#display');
 
 KeyQ.addEventListener('click', (e) => {
-    console.log(KeyQ.innerText);
-    output.innerText = 'Heater 1'
+    output.innerText = "Heater 1"
+
     audioQ.play();
-    console.log(output);
+    console.log(e.target.innerText);
 });
 KeyW.addEventListener('click', (e) => {
-    output.innerText = 'Heater 2';
+    output.innerText = "Heater 2"
     audioW.play();
 });
 
@@ -101,13 +101,11 @@ window.addEventListener('keyup', (e) => {
         output.innerText = 'Closed-HH';
         audioC.play();
     }
-
-
 })
 
 
 
-const sounds = {
+/*const sounds = {
     'KeyQ': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
     'KeyW': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3',
     'KeyE': 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3',
@@ -117,53 +115,4 @@ const sounds = {
     'KeyZ': 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3',
     'KeyX': 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3',
     'KeyC': 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-};
-
-const play = sound => {
-    console.log("playing", sound)
-    var audio = new Audio(sound);
-    audio.play();
-}
-/*
-document.getElementById('footer').addEventListener('click', function (e) {
-    const tgt = e.target.closest('button');
-
-    if (tgt) play(sounds[tgt.id]);
-    display.value = e.target.value;
-
-});*/
-
-
-
-
-const a = {
-    'KeyW': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom1.ogg',
-    'KeyA': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom2.ogg',
-    'KeyS': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/tom3.ogg',
-    'KeyD': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/pad1.ogg',
-    'KeyJ': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/snare1.ogg',
-    'KeyK': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/crash1.ogg',
-    'KeyL': 'https://www.virtualdrumming.com/drums/virtual-drum-sounds/hip-hop/kik.ogg'
-}
-
-
-//*const demo = document.getElementById('demo');
-
-//*document.getElementById('drumSet').addEventListener('click', function (e) {
-//*   const tgt = e.target.closest('button');
-
-//*   if (tgt) play(sounds[tgt.id]);
-//*  demo.value = e.target.value;
-
-//*}) 
-
-/*window.addEventListener('keypress', function (e) {
-    console.log(e.code)
-    demo.value = e.target.value
-    if (sounds[e.code]) {
-        console.log("clicking", e.code)
-        document.getElementById(e.code).click()
-
-
-    }
-})*/
+};*/
